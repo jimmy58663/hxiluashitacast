@@ -1,0 +1,5 @@
+#Backups
+backups/
+
+#Settings
+settings.lua
