@@ -3,3 +3,4 @@ backups/
 
 #Settings
 settings.lua
+.vscode/settings.json
