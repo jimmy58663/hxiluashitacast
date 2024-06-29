@@ -60,8 +60,10 @@ Common.Sets = T{
 	},
 	
 	Fish = {
-		Body = 'Fisherman\'s Tunica',
-		Hands = 'Fisherman\'s Gloves',
+		Range = 'Halcyon Rod',
+		Ammo = 'Insect Ball',
+		Body = 'Fsh. Tunica',
+		Hands = 'Fsh. Gloves',
 		Legs = 'Fisherman\'s Hose',
 		Feet = 'Fisherman\'s Boots',
 	},
@@ -103,13 +105,13 @@ Common.HandleCommand = function(args)
 		Common.Settings.Fish = not Common.Settings.Fish;
 		gFunc.Message(string.format('Fish mode %s.', Common.Settings.Fish and 'enabled' or 'disabled'));
 		
-		if (Common.Settings.Fish) then
+		--[[if (Common.Settings.Fish) then
 			gFunc.Disable('Range');
 			gFunc.Disable('Ammo');
 		else
 			gFunc.Enable('Range');
 			gFunc.Enable('Ammo');
-		end
+		end--]]
 		return;
 	end
 	
