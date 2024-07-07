@@ -221,7 +221,7 @@ profile.HandleDefault = function()
     if (player.Status == 'Engaged') then
         gFunc.EquipSet(sets.Tp);
 
-        if (Settings.Rune) then gFunc.EquipSet('Body', 'Gaudy Harness'); end
+        if (Settings.Rune) then gFunc.Equip('Body', 'Gaudy Harness'); end
     elseif (player.Status == 'Resting') then
         gFunc.EquipSet(sets.Resting);
         if Common.Settings.Staves then
