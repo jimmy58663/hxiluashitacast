@@ -79,6 +79,7 @@ local sets = {
 
     WS_Priority = {
         Range = 'Frenzy Fife',
+        Head = {'Voyager sallet'},
         Neck = 'Spike Necklace',
         Ear1 = 'Bushinomimi',
         Body = {'Hecatomb Harness', 'Wonder kaftan'},
@@ -93,7 +94,7 @@ local sets = {
 
     WSDex_Priority = {
         Range = 'Frenzy Fife',
-        Head = 'Empress Hairpin',
+        Head = {'Voyager sallet', 'Empress Hairpin'},
         Neck = 'Spike Necklace',
         Ear1 = 'Bushinomimi',
         Body = {'Bard\'s Jstcorps', 'Hecatomb Harness', 'Wonder kaftan'},

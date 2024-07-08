@@ -11,7 +11,7 @@ local sets = {
 
     -- Default set that will be worn
     Idle_Priority = {
-        Head = {'Empress Hairpin', 'Ryl.Ftm. Bandana'},
+        Head = {'Voyager sallet', 'Empress Hairpin', 'Ryl.Ftm. Bandana'},
         Neck = {'Peacock Amulet', 'Spike Necklace', 'Wing Pendant'},
         Ear1 = {'Beetle Earring +1', 'Onyx Earring'},
         Ear2 = {'Beetle Earring +1', 'Onyx Earring'},
@@ -27,7 +27,7 @@ local sets = {
 
     -- Set that is worn while engaged with an enemy
     Tp_Priority = {
-        Head = {'Empress Hairpin', 'Ryl.Ftm. Bandana'},
+        Head = {'Voyager sallet', 'Empress Hairpin', 'Ryl.Ftm. Bandana'},
         Neck = {'Peacock Amulet', 'Spike Necklace', 'Wing Pendant'},
         Ear1 = {'Beetle Earring +1', 'Onyx Earring'},
         Ear2 = {'Beetle Earring +1', 'Onyx Earring'},
@@ -46,6 +46,7 @@ local sets = {
 
     -- Set that is used for weapon skills
     WS_Priority = {
+        Head = {'Voyager sallet', 'Empress Hairpin'},
         Neck = 'Spike Necklace',
         Body = {'Wonder Kaftan', 'Power Gi'},
         Hands = {'Wonder Mitts', 'Ryl.Ftm. Gloves'},

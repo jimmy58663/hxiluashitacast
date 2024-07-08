@@ -19,7 +19,10 @@ local sets = {
     },
 
     Idle_Priority = {
-        Head = {'Panther Mask', 'Celata', 'Empress Hairpin', 'Noble\'s Ribbon'},
+        Head = {
+            'Panther Mask', 'Celata', 'Voyager sallet', 'Empress Hairpin',
+            'Noble\'s Ribbon'
+        },
         Neck = {'Peacock Amulet', 'Spike Necklace'},
         Ear1 = {'Spike Earring', 'Beetle Earring +1'},
         Ear2 = {'Spike Earring', 'Beetle Earring +1'},
@@ -43,7 +46,10 @@ local sets = {
     },
 
     Tp_Priority = {
-        Head = {'Panther Mask', 'Celata', 'Empress Hairpin', 'Noble\'s Ribbon'},
+        Head = {
+            'Panther Mask', 'Celata', 'Voyager sallet', 'Empress Hairpin',
+            'Noble\'s Ribbon'
+        },
         Neck = {'Peacock Amulet', 'Spike Necklace'},
         Ear1 = {'Spike Earring', 'Beetle Earring +1'},
         Ear2 = {'Spike Earring', 'Beetle Earring +1'},
@@ -69,7 +75,7 @@ local sets = {
     Resting = {},
 
     WS_Priority = {
-        Head = {'Celata'},
+        Head = {'Voyager sallet'},
         Neck = 'Spike Necklace',
         Ear1 = {'Bushinomimi'},
         Body = {
@@ -84,7 +90,7 @@ local sets = {
     },
 
     WSAcc_Priority = {
-        Head = {'Celata', 'Empress Hairpin'},
+        Head = {'Voyager sallet', 'Empress Hairpin'},
         Neck = 'Peacock Amulet',
         Ear1 = {'Bushinomimi'},
         Body = {

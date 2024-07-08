@@ -46,6 +46,7 @@ local sets = {
 
     -- Set that is used for weapon skills
     WS_Priority = {
+        Head = {'Voyager sallet', 'Empress Hairpin'},
         Neck = 'Spike Necklace',
         Body = {'Wonder Kaftan', 'Power Gi'},
         Hands = {'Wonder Mitts', 'Ryl.Ftm. Gloves'},
