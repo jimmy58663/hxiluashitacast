@@ -15,14 +15,14 @@ local sets = {
         Neck = {'Justice badge'},
         Ear1 = {'Onyx Earring'},
         Ear2 = {'Onyx Earring'},
-        Body = {'Wonder kaftan', 'Ryl.Ftm. Tunic'},
+        Body = {'Seer\'s tunic', 'Angler\'s tunica', 'Ryl.Ftm. Tunic'},
         Hands = {'Carbuncle Mitts', 'Dream Mittens +1'},
         Ring1 = {'Astral Ring'},
         Ring2 = {'Astral Ring'},
         Back = '',
         Waist = {'Friar\'s Rope'},
-        Legs = {'Wonder Braccae', 'Baron\'s slops', 'Freesword\'s slops'},
-        Feet = 'Dream boots +1'
+        Legs = {'Seer\'s slacks', 'Baron\'s slops', 'Freesword\'s slops'},
+        Feet = {'Seer\'s pumps', 'Dream boots +1'}
     },
 
     -- Set that is worn while engaged with an enemy
@@ -31,14 +31,14 @@ local sets = {
         Neck = {'Justice badge'},
         Ear1 = {'Onyx Earring'},
         Ear2 = {'Onyx Earring'},
-        Body = {'Wonder kaftan', 'Ryl.Ftm. Tunic'},
+        Body = {'Seer\'s tunic', 'Angler\'s tunica', 'Ryl.Ftm. Tunic'},
         Hands = {'Carbuncle Mitts', 'Dream Mittens +1'},
         Ring1 = {'Astral Ring'},
         Ring2 = {'Astral Ring'},
         Back = '',
         Waist = {'Friar\'s Rope'},
-        Legs = {'Wonder Braccae', 'Baron\'s slops', 'Freesword\'s slops'},
-        Feet = 'Dream boots +1'
+        Legs = {'Seer\'s slacks', 'Baron\'s slops', 'Freesword\'s slops'},
+        Feet = {'Seer\'s pumps', 'Dream boots +1'}
     },
 
     -- Set that is used while resting
