@@ -122,11 +122,11 @@ local sets = {
         Feet = 'Beast Gaiters'
     },
 
-    PetReady = {},
+    PetReady = {Head = 'Shep. Bonnet'},
 
     Reward_Priority = {
         Ammo = {
-            'Pet Food Zeta', 'Pet Food Epsilon', 'Pet Food Delta',
+            'Pet Food Zeta', 'Pet Fd. Epsilon', 'Pet Food Delta',
             'Pet Fd. Gamma', 'Pet Food Beta', 'Pet Food Alpha'
         },
         Body = 'Beast Jackcoat',
