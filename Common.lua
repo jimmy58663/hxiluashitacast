@@ -83,10 +83,10 @@ Common.Sets = T {
     Fish = {
         Range = 'Halcyon Rod',
         Ammo = 'Insect Ball',
-        Body = 'Fsh. Tunica',
-        Hands = 'Fsh. Gloves',
-        Legs = 'Fisherman\'s Hose',
-        Feet = 'Fisherman\'s Boots'
+        Body = 'Angler\'s tunica',
+        Hands = 'Angler\'s Gloves',
+        Legs = 'Angler\'s Hose',
+        Feet = 'Angler\'s Boots'
     },
 
     Aketon_Sandy = {Body = 'Kingdom Aketon'},
