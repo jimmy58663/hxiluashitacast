@@ -305,7 +305,7 @@ profile.HandleDefault = function()
     end
 
     local player = gData.GetPlayer();
-    if (player.SubJob ~= Common.Settings.SubJob) then
+    if (player.SubJob ~= 'NON' and player.SubJob ~= Common.Settings.SubJob) then
         ChangeSub(player.SubJob);
         Common.Settings.SubJob = player.SubJob;
     end
