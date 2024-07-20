@@ -82,7 +82,7 @@ Common.Sets = T {
 
     Fish = {
         Range = 'Halcyon Rod',
-        Ammo = 'Insect Ball',
+        Ammo = 'Fly Lure',
         Body = 'Angler\'s tunica',
         Hands = 'Angler\'s Gloves',
         Legs = 'Angler\'s Hose',

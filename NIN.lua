@@ -10,6 +10,7 @@ local sets = {
     LockStyle = {},
 
     Idle_Priority = {
+        Ammo = {'Sweet Satchet'},
         Head = {'Empress Hairpin', 'Cotton Headband', 'Ryl.Ftm. Bandana'},
         Neck = {'Peacock Amulet', 'Spike Necklace', 'Wing Pendant'},
         Ear1 = {'Beetle Earring +1', 'Onyx Earring'},
@@ -28,6 +29,7 @@ local sets = {
     },
 
     Tp_Priority = {
+        Ammo = {'Sweet Satchet'},
         Head = {'Empress Hairpin', 'Cotton Headband', 'Ryl.Ftm. Bandana'},
         Neck = {'Peacock Amulet', 'Spike Necklace', 'Wing Pendant'},
         Ear1 = {'Beetle Earring +1', 'Onyx Earring'},

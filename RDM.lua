@@ -11,6 +11,7 @@ local sets = {
 
     -- Default set that will be worn
     Idle_Priority = {
+        Ammo = {'Sweet Satchet'},
         Head = {'Silver Hairpin', 'Ryl.Ftm. Bandana'},
         Neck = {'Justice badge'},
         Ear1 = {'Onyx Earring'},
@@ -27,6 +28,7 @@ local sets = {
 
     -- Set that is worn while engaged with an enemy
     Tp_Priority = {
+        Ammo = {'Sweet Satchet'},
         Head = {'Silver Hairpin', 'Ryl.Ftm. Bandana'},
         Neck = {'Justice badge'},
         Ear1 = {'Onyx Earring'},
