@@ -110,15 +110,15 @@ local sets = {
     NinIdle_Priority = {
         Head = {'Bard\'s Roundlet', 'Opo-opo Crown'},
         Ear2 = {'Melody Earring'},
-        Ring1 = {'Angel\'s Ring', 'Moon Ring', 'Hope Ring'},
-        Ring2 = {'Angel\'s Ring', 'Moon Ring', 'Hope Ring'},
+        Ring1 = {'Angel\'s Ring', 'Hope Ring'},
+        Ring2 = {'Angel\'s Ring', 'Hope Ring'},
         Feet = {'Choral slippers'}
     },
 
     NinTp_Priority = {
         Ear2 = {'Melody Earring'},
-        Ring1 = {'Angel\'s Ring', 'Moon Ring', 'Hope Ring'},
-        Ring2 = {'Angel\'s Ring', 'Moon Ring', 'Hope Ring'}
+        Ring1 = {'Angel\'s Ring', 'Hope Ring'},
+        Ring2 = {'Angel\'s Ring', 'Hope Ring'}
     },
 
     Song_Skill = {Head = 'Bard\'s Roundlet', Hands = 'Chl. Cuffs +1'},
@@ -163,8 +163,8 @@ local sets = {
         Ear1 = {'Melody Earring'},
         Ear2 = {'Melody Earring'},
         Neck = 'Flower Necklace',
-        Ring1 = {'Angel\'s Ring', 'Moon Ring', 'Hope Ring'},
-        Ring2 = {'Angel\'s Ring', 'Moon Ring', 'Hope Ring'},
+        Ring1 = {'Angel\'s Ring', 'Hope Ring'},
+        Ring2 = {'Angel\'s Ring', 'Hope Ring'},
         Waist = {'Gleeman\'s Belt', 'Corsette'},
         Legs = 'Bard\'s Cannions'
     },
