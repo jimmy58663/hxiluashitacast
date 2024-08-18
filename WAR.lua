@@ -1,8 +1,12 @@
 local profile = {};
 local Settings = {
     -- Put job local settings here
-    DualWield = false
+    DualWield = false,
+    TpVariant = 1
 };
+
+-- Tp Sets to cycle through
+local TpVariantTable = {[1] = 'Default', [2] = 'HighAcc'}
 
 -- Loads in common sets and functionality to all jobs
 local Common = gFunc.LoadFile('Common.lua');
@@ -44,7 +48,35 @@ local sets = {
         Feet = {'Thick Sollerets', 'Bounding Boots'}
     },
 
-    Tp_Priority = {
+    Tp_Default_Priority = {
+        Ammo = {'Bomb Core'},
+        Head = {
+            'Panther Mask', 'Celata', 'Voyager sallet', 'Empress Hairpin',
+            'Noble\'s Ribbon'
+        },
+        Neck = {'Peacock Amulet', 'Spike Necklace'},
+        Ear1 = {'Spike Earring', 'Beetle Earring +1'},
+        Ear2 = {'Spike Earring', 'Beetle Earring +1'},
+        Body = {
+            'Haubergeon', 'Scorpion Harness', 'Alumine Haubert',
+            'Wonder Kaftan', 'Beetle harness +1'
+        },
+        Hands = {
+            'Dusk Gloves', 'Thick Mufflers', 'Ryl.Sqr. Mufflers',
+            'Wonder Mitts', 'Ryl.Ftm. Gloves'
+        },
+        Ring1 = {'Toreador\'s Ring', 'Jaeger Ring', 'Balance Ring'},
+        Ring2 = {'Rajas Ring', 'Balance Ring'},
+        Back = {'Amemet Mantle +1'},
+        Waist = {'Swift belt', 'Life belt', 'Tilt Belt', 'Warrior\'s Belt +1'},
+        Legs = {
+            'Byakko\'s Haidate', 'Ryl.Kgt. Breeches', 'Alumine Brayettes',
+            'Republic Subligar', 'Brass Subligar'
+        },
+        Feet = {'Dusk Ledelsens', 'Thick Sollerets', 'Bounding Boots'}
+    },
+
+    Tp_HighAcc_Priority = {
         Ammo = {'Bomb Core'},
         Head = {
             'Panther Mask', 'Celata', 'Voyager sallet', 'Empress Hairpin',
@@ -134,7 +166,7 @@ local sets = {
 
     Charm = {Head = 'Noble\'s Ribbon', Ring1 = 'Hope ring', Ring2 = 'Hope ring'},
 
-    DualWield_Priority = {
+    DualWield_Default_Priority = {
         Main = {
             'Maneater', 'Tabarzin', 'Fransisca', 'Darksteel axe', 'Viking axe',
             'Barbaroi axe', 'Tomahawk'
@@ -146,8 +178,20 @@ local sets = {
         Ear2 = {'Brutal earring', 'Spike earring'}
     },
 
+    DualWield_HighAcc_Priority = {
+        Main = {
+            'Maneater', 'Tabarzin', 'Fransisca', 'Darksteel axe', 'Viking axe',
+            'Barbaroi axe', 'Tomahawk'
+        },
+        Sub = {'Viking axe', 'Mythril axe', 'Tomahawk'},
+        Ear1 = {'Stealth earring', 'Spike earring'},
+        Ear2 = {'Brutal earring', 'Spike earring'}
+    },
+
     TwoHander_Priority = {
-        Main = {'Byakko\'s axe', 'Demon\'s axe', 'Leucous voulge'},
+        Main = {
+            'Axe of trials', 'Byakko\'s axe', 'Demon\'s axe', 'Leucous voulge'
+        },
         Sub = '',
         Ear1 = {'Attila\'s earring', 'Spike earring'},
         Ear2 = {'Brutal earring', 'Bushinomimi', 'Spike earring'}
@@ -191,9 +235,17 @@ profile.OnLoad = function()
     Common.Settings.Zone = environment.Area;
 
     gFunc.LockStyle(sets.LockStyle);
+
+    AshitaCore:GetChatManager():QueueCommand(-1,
+                                             '/alias /dualwield /lac fwd dualwield')
+    AshitaCore:GetChatManager():QueueCommand(-1,
+                                             '/alias /tpcycle /lac fwd tpcycle')
 end
 
-profile.OnUnload = function() end
+profile.OnUnload = function()
+    AshitaCore:GetChatManager():QueueCommand(-1, '/alias delete /dualwield')
+    AshitaCore:GetChatManager():QueueCommand(-1, '/alias delete /tpcycle')
+end
 
 profile.HandleCommand = function(args)
     -- Fowards handling to common command handler
@@ -203,13 +255,23 @@ profile.HandleCommand = function(args)
         return;
     end
 
-    -- Toggles DualWield setting. In-game use "/lac fwd DualWield" to toggle the setting.
+    -- Toggles DualWield setting. In-game use "/lac fwd DualWield" or "/dualwield" to toggle the setting.
     if (string.lower(args[1]) == 'dualwield') then
         Settings.DualWield = not Settings.DualWield;
         gFunc.Message(string.format('Dual Wield mode %s.',
                                     Settings.DualWield and 'enabled' or
                                         'disabled'));
         return;
+    end
+
+    -- Handles cycling through Tp sets. In-game use "/lac fwd tpcycle" or "/tpcycle" to cycle the setting.
+    if (string.lower(args[1]) == 'tpcycle') then
+        Settings.TpVariant = Settings.TpVariant + 1;
+        if (Settings.TpVariant > #TpVariantTable) then
+            Settings.TpVariant = 1;
+        end
+        gFunc.Message(string.format('Tp mode set to %s.',
+                                    TpVariantTable[Settings.TpVariant]));
     end
 end
 
@@ -230,7 +292,7 @@ profile.HandleDefault = function()
 
     -- Handles player status, Helm, and Craft settings
     if (player.Status == 'Engaged') then
-        gFunc.EquipSet(sets.Tp);
+        gFunc.EquipSet('Tp_' .. TpVariantTable[Settings.TpVariant]);
     elseif (player.Status == 'Resting') then
         gFunc.EquipSet(sets.Resting);
     else
@@ -249,7 +311,7 @@ profile.HandleDefault = function()
 
     -- Handles weapons
     if (Settings.DualWield) then
-        gFunc.EquipSet(sets.DualWield);
+        gFunc.EquipSet('DualWield_' .. TpVariantTable[Settings.TpVariant]);
     else
         gFunc.EquipSet(sets.TwoHander);
     end
